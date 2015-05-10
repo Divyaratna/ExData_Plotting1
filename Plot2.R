@@ -23,7 +23,7 @@ startDate = strptime("01/02/2007 00:00:00", format="%d/%m/%Y %H:%M:%S", tz="UTC"
 endDate = strptime("02/02/2007 23:59:59", format="%d/%m/%Y %H:%M:%S", tz="UTC")
 Epc = Epc[Epc$timestamp >= startDate & Epc$timestamp <= endDate, ]
 
-## Create the plot and save it as a PNG## Creating the plot
+## Create the plot and save it as a PNG
 png(filename="plot2.png", width=480, height=480)
 plot(Epc$timestamp, Epc$Global_active_power, type="l", xlab="",
      ylab="Global Active Power (kilowatts)")
